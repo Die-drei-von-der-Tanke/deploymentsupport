@@ -36,7 +36,8 @@
             "type": "string"
         },
         "virtualMachineName": {
-            "type": "string"
+            "type": "string",
+            "value": "AZ-Member-300"
         },
         "virtualMachineComputerName": {
             "type": "string"
