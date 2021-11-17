@@ -71,7 +71,8 @@
               "2019-Datacenter-smalldisk",
               "2019-Datacenter-with-Containers",
               "2019-Datacenter-with-Containers-smalldisk",
-              "2022-datacenter-azure-edition"
+              "2022-datacenter-azure-edition",
+              "16.04.0-LTS"
             ],
             "metadata": {
               "description": "The Windows version for the VM. This will pick a fully patched image of this given Windows version."
