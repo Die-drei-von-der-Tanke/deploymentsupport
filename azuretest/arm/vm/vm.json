@@ -102,7 +102,7 @@
       },
       "vmName": {
         "type": "string",
-        "defaultValue": "simple-vm",
+        "defaultValue": "AZ-Member-01",
         "metadata": {
           "description": "Name of the virtual machine."
         }
