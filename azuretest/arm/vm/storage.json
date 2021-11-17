@@ -1,21 +1,31 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-    "parameters": {},
+    "parameters": {
+        "numberOfInstances": {
+            "type": "int",
+            "defaultValue": 2,
+            "minValue": 2,
+            "maxValue": 10,
+            "metadata": {
+                "description": "Number of VMs to deploy, limit 5 since this sample is using a single storage account"
+            }
+        }
+    },
     "variables": {},
     "resources": [
         {
             "type": "Microsoft.Storage/storageAccounts",
             "apiVersion": "2019-06-01",
-            "name": "[concat('storage', copyIndex('copystorage', 1))]",
+            "name": "[concat('storage', copyIndex())]",
             "location": "[resourceGroup().location]",
             "kind": "StorageV2",
             "sku": {
                 "name": "Standard_LRS"
             },
             "copy": {
-                "name": "copystorage",
-                "count": 3
+                "name": "storagecopy",
+                "count": "[parameters('numberOfInstances')]"
             }
         }
     ],
