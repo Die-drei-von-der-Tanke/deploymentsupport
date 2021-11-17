@@ -14,7 +14,7 @@
                 "name": "Standard_LRS"
             },
             "copy": {
-                "nam": "storagecopy",
+                "name": "storagecopy",
                 "count": 3
             }
         }
