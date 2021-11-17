@@ -127,11 +127,12 @@
         "sku": {
           "name": "Standard_LRS"
         },
-        "kind": "Storage",
         "copy": {
             "name": "copystorage",
             "count": 3
-          }
+        },
+        "kind": "Storage"
+
       },
       
       {
@@ -142,15 +143,16 @@
         "sku": {
           "name": "[parameters('publicIpSku')]"
         },
+        "copy": {
+            "name": "copypublicIpName",
+            "count": 3
+        },
         "properties": {
           "publicIPAllocationMethod": "[parameters('publicIPAllocationMethod')]",
           "dnsSettings": {
             "domainNameLabel": "[parameters('dnsLabelPrefix')]"
-          },
-          "copy": {
-            "name": "copypublicIpName",
-            "count": 3
           }
+
         }
       },
       {
