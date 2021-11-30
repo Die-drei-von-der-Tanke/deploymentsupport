@@ -96,7 +96,7 @@
             "publisher": "MicrosoftWindowsServer",
             "offer": "WindowsServer",
             "sku": "[parameters('OSVersion')]",
-            "version": "Major"
+            "version": "major"
         },
         "imageReference": "[variables(parameters('OS'))]"
     },
